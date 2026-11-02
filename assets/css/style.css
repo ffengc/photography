@@ -1,0 +1,402 @@
+/* Photography site: white by default, dark at night or on request. Editorial layout, slow and quiet motion. */
+
+@font-face {
+  font-family: "Instrument Serif";
+  src: url("../fonts/instrument-serif-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Instrument Serif";
+  src: url("../fonts/instrument-serif-400-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --bg: #ffffff;
+  --fg: #141414;
+  --muted: #8d8d8a;
+  --line: #e8e7e3;
+  --pad: 48px;
+  --max: 1560px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --serif: "Instrument Serif", "Songti SC", "STSong", "Noto Serif SC", Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0f0f0f;
+  --fg: #ececea;
+  --muted: #8a8a87;
+  --line: #262625;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 15px/1.6 var(--sans);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.5s var(--ease), color 0.5s var(--ease);
+}
+
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; }
+img { -webkit-user-drag: none; -webkit-touch-callout: none; user-select: none; }
+
+/* Small uppercase labels used across the site */
+.brand__tag,
+.home-link,
+.theme-toggle,
+.switch button,
+.back-link,
+.tile__date,
+.work-head__meta,
+.plate__detail,
+.work-nav__label {
+  font: 500 11px/1 var(--sans);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 30px var(--pad);
+}
+
+.brand { display: flex; align-items: baseline; gap: 14px; white-space: nowrap; }
+.brand__name { font: 400 27px/1 var(--serif); letter-spacing: 0.005em; }
+.brand__tag { color: var(--muted); }
+
+.site-header__actions { display: flex; align-items: center; gap: 28px; }
+
+.home-link { color: var(--muted); white-space: nowrap; transition: color 0.3s; }
+.home-link:hover { color: var(--fg); }
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  border: 0;
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.theme-toggle:hover { color: var(--fg); }
+.theme-toggle[hidden] { display: none; }
+.theme-toggle svg { display: none; width: 14px; height: 14px; }
+.theme-toggle[data-mode="auto"] .icon-auto,
+.theme-toggle[data-mode="light"] .icon-light,
+.theme-toggle[data-mode="dark"] .icon-dark { display: block; }
+
+main {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+
+/* Home: order and size switches */
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 6px 0 0;
+}
+.toolbar[hidden] { display: none; }
+
+.switch { display: flex; align-items: center; gap: 26px; }
+
+.switch button {
+  position: relative;
+  padding: 8px 0;
+  border: 0;
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.switch button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s var(--ease);
+}
+.switch button:hover { color: var(--fg); }
+.switch button[aria-pressed="true"] { color: var(--fg); }
+.switch button[aria-pressed="true"]::after { transform: scaleX(1); }
+
+.switch--icons { gap: 14px; }
+.switch--icons button::after { display: none; }
+.switch--icons svg { display: block; width: 15px; height: 15px; fill: currentColor; }
+
+/* Cover photo: the first selected work */
+.feature { display: block; margin-top: 36px; }
+
+.feature__frame,
+.plate__link {
+  display: block;
+  width: min(100%, calc(76svh * var(--ar)));
+  aspect-ratio: var(--ar);
+  margin: 0 auto;
+  overflow: hidden;
+  background: var(--ph, var(--line));
+}
+
+.feature__frame img,
+.plate__link img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.6s var(--ease), opacity 1s var(--ease);
+}
+.feature:hover img { transform: scale(1.015); }
+.feature .tile__caption { width: min(100%, calc(76svh * var(--ar))); margin: 18px auto 0; }
+
+/* Section titles */
+.section-title {
+  margin: 128px 0 40px;
+  font: 400 clamp(32px, 3.4vw, 48px)/1.05 var(--serif);
+  letter-spacing: -0.005em;
+}
+.section-title sup {
+  position: relative;
+  top: -0.9em;
+  margin-left: 10px;
+  font: 500 11px/1 var(--sans);
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+.view > .section-title:first-child { margin-top: 56px; }
+
+/* Masonry columns: tiles go into the shortest column (home.js); a plain grid without JavaScript. */
+.masonry {
+  --cols: 2;
+  --gx: 56px;
+  --gy: 88px;
+  display: grid;
+  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+  gap: var(--gy) var(--gx);
+  align-items: start;
+}
+.masonry.is-laid { display: flex; align-items: flex-start; gap: var(--gx); }
+.masonry__col { display: flex; flex: 1 1 0; flex-direction: column; gap: var(--gy); min-width: 0; }
+
+.tile { display: block; }
+.tile--dup { display: none; }
+
+.tile__frame { display: block; overflow: hidden; background: var(--ph, var(--line)); }
+.tile__frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 1.4s var(--ease), opacity 1s var(--ease);
+}
+.tile:hover .tile__frame img { transform: scale(1.03); }
+
+.tile__caption { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-top: 16px; }
+.tile__title {
+  font: 400 20px/1.25 var(--serif);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: text-decoration-color 0.4s;
+}
+.tile:hover .tile__title,
+.feature:hover .tile__title { text-decoration-color: currentColor; }
+.tile__date { flex: none; color: var(--muted); }
+
+/* Small photos: more at once, no captions */
+main[data-size="small"] .masonry { --cols: 4; --gx: 16px; --gy: 16px; }
+main[data-size="small"] .tile__caption { display: none; }
+main[data-size="small"] .tile--dup { display: block; }
+main[data-size="small"] .feature { display: none; }
+main[data-size="small"] .feature + .section-title { margin-top: 56px; }
+main[data-size="small"] .tile:hover .tile__frame img { transform: scale(1.02); }
+
+/* Work page: one work (a single photo or a series), shown like an exhibition */
+.back-link { display: inline-block; color: var(--muted); transition: color 0.3s; }
+.back-link:hover { color: var(--fg); }
+
+.work-head { padding: 5svh 0 5svh; text-align: center; }
+.work-head h1 { margin: 0; font: 400 clamp(40px, 5.2vw, 76px)/1 var(--serif); letter-spacing: -0.01em; }
+.work-head__meta { margin: 26px 0 0; color: var(--muted); }
+.work-head__note { max-width: 560px; margin: 28px auto 0; font: italic 400 22px/1.5 var(--serif); }
+
+html.snap { scroll-snap-type: y proximity; }
+
+.plate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+  margin: 0;
+  padding: 6svh 0;
+  scroll-snap-align: center;
+}
+/* The first photo sits right under the title, so title and photo share the first screen. */
+.plate:first-child { min-height: 0; padding-top: 0; }
+.plate:first-child .plate__link { width: min(100%, calc(64svh * var(--ar))); }
+.plate__link { cursor: zoom-in; }
+.plate__link:hover img { transform: scale(1.01); }
+
+.plate__label { max-width: 640px; margin-top: 24px; text-align: center; }
+.plate__label p { margin: 0; }
+.plate__caption { font: italic 400 21px/1.45 var(--serif); }
+.plate__caption + p { margin-top: 12px; }
+.plate__detail { color: var(--muted); }
+.plate__label .plate__exif { margin-top: 8px; font-size: 12px; letter-spacing: 0.02em; color: var(--muted); }
+
+.counter {
+  position: fixed;
+  right: var(--pad);
+  bottom: 30px;
+  z-index: 5;
+  font: 400 17px/1 var(--serif);
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.counter__now { color: var(--fg); }
+
+.work-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-top: 12svh;
+  padding-top: 40px;
+  border-top: 1px solid var(--line);
+}
+.work-nav a { display: block; }
+.work-nav__next { text-align: right; }
+.work-nav__label { color: var(--muted); }
+.work-nav__title {
+  display: block;
+  margin-top: 14px;
+  font: 400 clamp(26px, 2.6vw, 36px)/1.1 var(--serif);
+  transition: opacity 0.3s;
+}
+.work-nav__thumb {
+  display: block;
+  width: min(100%, 300px);
+  aspect-ratio: var(--ar);
+  margin-top: 22px;
+  overflow: hidden;
+  background: var(--ph, var(--line));
+}
+.work-nav__next .work-nav__thumb { margin-left: auto; }
+.work-nav__thumb img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 1.4s var(--ease), opacity 1s var(--ease); }
+.work-nav a:hover .work-nav__thumb img { transform: scale(1.04); }
+
+/* Footer: copyright and contact */
+.site-footer {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 160px var(--pad) 48px;
+}
+
+.site-footer__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 24px 48px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+.site-footer__name { margin: 0; font: 400 20px/1.3 var(--serif); color: var(--fg); }
+.site-footer__text p { max-width: 640px; margin: 0 0 10px; }
+.site-footer a { text-decoration: underline; text-underline-offset: 3px; transition: color 0.3s; }
+.site-footer a:hover { color: var(--fg); }
+
+/* Lightbox follows the theme: white by day, black at night */
+.pswp {
+  --pswp-bg: var(--bg);
+  --pswp-placeholder-bg: var(--line);
+  --pswp-icon-color: var(--fg);
+  --pswp-icon-color-secondary: var(--bg);
+  --pswp-icon-stroke-color: var(--bg);
+  --pswp-icon-stroke-width: 0;
+}
+.pswp__counter { font: 400 16px/1 var(--serif); color: var(--muted); text-shadow: none; opacity: 1; }
+.pswp__button { opacity: 0.6; transition: opacity 0.3s; }
+.pswp__button:hover { opacity: 1; }
+
+/* Motion: blocks rise in as they scroll into view; photos fade in once loaded (motion.js) */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 1.1s var(--ease) var(--delay, 0ms), transform 1.4s var(--ease) var(--delay, 0ms);
+}
+.js .reveal.is-in { opacity: 1; transform: none; }
+.js img.fade { opacity: 0; }
+.js img.fade.is-loaded { opacity: 1; }
+.no-motion .reveal,
+.no-motion img.fade { opacity: 1 !important; transform: none !important; }
+
+/* Page changes: the clicked photo flies into place on the work page (browsers with view transitions) */
+@view-transition { navigation: auto; }
+::view-transition-group(photo) { animation-duration: 0.8s; animation-timing-function: var(--ease); }
+::view-transition-old(root),
+::view-transition-new(root) { animation-duration: 0.5s; }
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition { navigation: none; }
+  .js .reveal,
+  .js img.fade { opacity: 1; transform: none; transition: none; }
+  html.snap { scroll-snap-type: none; }
+}
+
+@media (max-width: 1100px) {
+  :root { --pad: 32px; }
+  .masonry { --gx: 40px; --gy: 68px; }
+  main[data-size="small"] .masonry { --cols: 3; }
+}
+
+@media (max-width: 700px) {
+  :root { --pad: 18px; }
+  .site-header { padding-top: 20px; padding-bottom: 20px; }
+  .brand__name { font-size: 23px; }
+  .brand__tag { display: none; }
+  .site-header__actions { gap: 18px; }
+  .masonry { --cols: 1; --gy: 52px; }
+  main[data-size="small"] .masonry { --cols: 2; --gx: 8px; --gy: 8px; }
+  .section-title { margin-top: 88px; }
+  .feature__frame,
+  .plate__link { width: min(100%, calc(70svh * var(--ar))); }
+  .plate { min-height: 0; padding: 7svh 0; }
+  .work-head { padding-top: 7svh; }
+  .work-nav { grid-template-columns: 1fr; gap: 40px; }
+  .work-nav__next { text-align: left; }
+  .work-nav__next .work-nav__thumb { margin-left: 0; }
+  .counter { display: none; }
+  .site-footer { padding-top: 110px; }
+  .site-footer__inner { grid-template-columns: 1fr; }
+}

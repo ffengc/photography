@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% macro caption(t) %}
+<span class="tile__caption"><span class="tile__title">{{ t.title }}</span><span class="tile__date">{{ t.date }}</span></span>
+{% endmacro %}
+
+{% macro tile(t, extra='') %}
+<a class="tile reveal{{ extra }}" href="{{ t.href }}" data-ar="{{ t.ar }}">
+  <span class="tile__frame" style="--ph: {{ t.color }}; aspect-ratio: {{ t.w }} / {{ t.h }}">
+    <img class="fade" src="{{ t.small }}" srcset="{{ t.small }} {{ t.w }}w, {{ t.large }} {{ t.lw }}w" sizes="(min-width: 700px) 46vw, 92vw" width="{{ t.w }}" height="{{ t.h }}" alt="{{ t.alt }}" loading="{{ 'eager' if t.eager else 'lazy' }}" decoding="async" draggable="false">
+  </span>
+  {{ caption(t) }}
+</a>
+{% endmacro %}
+
+{% block main %}
+<div class="toolbar" hidden>
+  <div class="switch" role="group" aria-label="Order">
+    <button type="button" data-view="selected" aria-pressed="true">Selected</button>
+    <button type="button" data-view="timeline" aria-pressed="false">Chronological</button>
+  </div>
+  <div class="switch switch--icons" role="group" aria-label="Photo size">
+    <button type="button" data-size="large" aria-pressed="true" aria-label="Large photos" title="Large photos">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="2" width="6.2" height="12" rx=".6"/><rect x="8.8" y="2" width="6.2" height="12" rx=".6"/></svg>
+    </button>
+    <button type="button" data-size="small" aria-pressed="false" aria-label="Small photos" title="Small photos">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1" width="4" height="4" rx=".5"/><rect x="6" y="1" width="4" height="4" rx=".5"/><rect x="11" y="1" width="4" height="4" rx=".5"/><rect x="1" y="6" width="4" height="4" rx=".5"/><rect x="6" y="6" width="4" height="4" rx=".5"/><rect x="11" y="6" width="4" height="4" rx=".5"/><rect x="1" y="11" width="4" height="4" rx=".5"/><rect x="6" y="11" width="4" height="4" rx=".5"/><rect x="11" y="11" width="4" height="4" rx=".5"/></svg>
+    </button>
+  </div>
+</div>
+
+<section class="view" data-view="selected">
+  {% if feature %}
+  <a class="feature reveal" href="{{ feature.href }}">
+    <span class="feature__frame" style="--ar: {{ feature.ar }}; --ph: {{ feature.color }}">
+      <img class="fade" src="{{ feature.large }}" width="{{ feature.lw }}" height="{{ feature.lh }}" alt="{{ feature.alt }}" fetchpriority="high" decoding="async" draggable="false">
+    </span>
+    {{ caption(feature) }}
+  </a>
+  {% endif %}
+  {% if selected %}
+  <h2 class="section-title reveal">Selected Works<sup>{{ selected | length }}</sup></h2>
+  <div class="masonry">
+    {% for t in selected %}
+    {{ tile(t, ' tile--dup' if loop.first else '') }}
+    {% endfor %}
+  </div>
+  {% endif %}
+  {% if rest %}
+  <h2 class="section-title reveal">Archive<sup>{{ rest | length }}</sup></h2>
+  <div class="masonry">
+    {% for t in rest %}
+    {{ tile(t) }}
+    {% endfor %}
+  </div>
+  {% endif %}
+</section>
+
+<section class="view" data-view="timeline" hidden>
+  <h2 class="section-title reveal">All Photographs<sup>{{ timeline | length }}</sup></h2>
+  <div class="masonry">
+    {% for t in timeline %}
+    {{ tile(t) }}
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script type="module" src="{{ root }}assets/js/home.js"></script>
+{% endblock %}

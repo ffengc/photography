@@ -1,0 +1,90 @@
+# 网站内容。改完运行：python3 scripts/build.py
+site:
+  author: Fengcheng Yu
+  homepage: https://ffengc.github.io/
+  email: yufc779@gmail.com
+  watermark: "© Fengcheng Yu"   # 改水印文字后，所有图片会重新生成
+  timeline: newest             # 按时间排时：newest 新的在前，oldest 旧的在前
+
+# 精选：默认页面最上面，按这里的顺序显示（上下挪动就能调顺序）。写法："文件夹名/文件名"
+selected:
+  - "Lugard Road, Hong Kong/IMG_4430.JPG"   # the best，排第一
+  - "San Pedro/IMG_2067.jpg"
+  - "ROW DTLA, Los Angeles/IMG_6358_TIF.JPG"
+  - "九曲黄河/IMG_5672.JPG"
+  - "九曲黄河/IMG_5674.JPG"
+  - "Chenzhou/IMG_2083.JPG"
+  - "Chenzhou/IMG_2085.JPG"
+  - "Siguniang Mountain/IMG_1999.JPG"
+  - "Siguniang Mountain/IMG_2002.JPG"
+  - "Kangding/D30A9427.JPG"
+  - "Haizhu, Guangzhou/IMG_4448.jpg"
+  - "Weihai/IMG_1026.JPG"
+  - "Tsingtao/IMG_0932.jpg"
+
+# 作品：原图文件夹里的每个子文件夹就是一组作品（一张或多张），会自动出现在网站上。
+# 下面按文件夹名补充信息，都可以不写：
+#   id        网址里的名字（小写英文、数字、连字符）
+#   title     标题，不写就用文件夹名
+#   location  拍摄地点，不写就用文件夹名
+#   date      这组照片都没有拍摄时间时，用来排序，例如 2025-11
+#   note      这组作品的一句话
+#   camera / lens   给这组里缺少相机信息的照片补上
+#   photos    每张照片的信息（键是文件名）：
+#               caption 一句话 / location 地点 / date 拍摄日期（例如 2025-11-27）
+#               camera / lens / focal / aperture / shutter / iso（覆盖自动读到的参数）
+#               show_exif: false（不显示参数） / hidden: true（暂时不放）
+works:
+  "Chenzhou":
+    id: chenzhou
+    note: ""
+
+  "Dongshankou, Guangzhou":
+    id: dongshankou-guangzhou
+    note: ""
+
+  "Haizhu, Guangzhou":
+    id: haizhu-guangzhou
+    note: ""
+
+  "Kangding":
+    id: kangding
+    note: ""
+
+  "Lugard Road, Hong Kong":
+    id: lugard-road-hong-kong
+    note: ""
+
+  "ROW DTLA, Los Angeles":
+    id: row-dtla-los-angeles
+    note: ""
+
+  "San Pedro":
+    id: san-pedro
+    note: ""
+    # 这三张是从 Instagram 存下来的，没有拍摄时间，现在跟着 IMG_2067 排序。知道日期的话可以补上：
+    # photos:
+    #   925059F4-597D-484D-B1B3-E5D8568EEE15.JPG:
+    #     date: 2025-11-27
+
+  "Siguniang Mountain":
+    id: siguniang-mountain
+    note: ""
+
+  "Tsingtao":
+    id: tsingtao
+    note: ""
+    # 这组照片被美图去掉了相机型号（镜头和参数还在）。想显示相机的话在这里补上：
+    # camera: Canon EOS R6 Mark II
+
+  "Weihai":
+    id: weihai
+    note: ""
+
+  "九曲黄河":
+    id: jiuqu-huanghe
+    note: ""
+    # IMG_5674 是航拍，相机信息里是大疆的内部代号 FC3582，可以改成正式型号：
+    # photos:
+    #   IMG_5674.JPG:
+    #     camera: DJI ...

@@ -1,0 +1,3 @@
+# 复制成 config.local.yaml（不会被提交），写上原图文件夹的位置。
+# 这个文件夹必须在仓库外面，每个系列一个子文件夹，例如 ~/Pictures/photography-originals/tokyo-2025/
+originals: ~/Pictures/photography-originals

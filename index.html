@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fengcheng Yu · Photography</title>
+  <meta name="description" content="Photography by Fengcheng Yu">
+  <script>
+    // Theme before first paint: the visitor's choice, or by local time (light 7:00–19:00).
+    (function () {
+      var root = document.documentElement, mode = 'auto', hour = new Date().getHours();
+      try { mode = localStorage.getItem('photography:theme') || 'auto'; } catch (e) {}
+      if (mode !== 'light' && mode !== 'dark') mode = 'auto';
+      root.setAttribute('data-theme-mode', mode);
+      root.setAttribute('data-theme', mode === 'auto' ? (hour >= 7 && hour < 19 ? 'light' : 'dark') : mode);
+      root.className = root.className.replace('no-js', 'js');
+    })();
+  </script>
+  <link rel="icon" href="https://ffengc.github.io/images/favicon.ico">
+  <link rel="preload" href="assets/fonts/instrument-serif-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./"><span class="brand__name">Fengcheng Yu</span><span class="brand__tag">Photography</span></a>
+    <div class="site-header__actions">
+      <button type="button" class="theme-toggle" data-mode="auto" hidden>
+        <svg class="icon-auto" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor"/><path d="M8 1.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg>
+        <svg class="icon-light" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="3" fill="currentColor"/><path d="M8 .8v2M8 13.2v2M.8 8h2M13.2 8h2M2.9 2.9l1.4 1.4M11.7 11.7l1.4 1.4M2.9 13.1l1.4-1.4M11.7 4.3l1.4-1.4" stroke="currentColor" stroke-linecap="round"/></svg>
+        <svg class="icon-dark" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.5 10.2A6 6 0 0 1 5.8 2.5a6 6 0 1 0 7.7 7.7z" fill="currentColor"/></svg>
+        <span class="theme-toggle__label">Auto</span>
+      </button>
+      <a class="home-link" href="https://ffengc.github.io/">Homepage ↗</a>
+    </div>
+  </header>
+
+  <main>
+<div class="toolbar" hidden>
+  <div class="switch" role="group" aria-label="Order">
+    <button type="button" data-view="selected" aria-pressed="true">Selected</button>
+    <button type="button" data-view="timeline" aria-pressed="false">Chronological</button>
+  </div>
+  <div class="switch switch--icons" role="group" aria-label="Photo size">
+    <button type="button" data-size="large" aria-pressed="true" aria-label="Large photos" title="Large photos">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="2" width="6.2" height="12" rx=".6"/><rect x="8.8" y="2" width="6.2" height="12" rx=".6"/></svg>
+    </button>
+    <button type="button" data-size="small" aria-pressed="false" aria-label="Small photos" title="Small photos">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1" width="4" height="4" rx=".5"/><rect x="6" y="1" width="4" height="4" rx=".5"/><rect x="11" y="1" width="4" height="4" rx=".5"/><rect x="1" y="6" width="4" height="4" rx=".5"/><rect x="6" y="6" width="4" height="4" rx=".5"/><rect x="11" y="6" width="4" height="4" rx=".5"/><rect x="1" y="11" width="4" height="4" rx=".5"/><rect x="6" y="11" width="4" height="4" rx=".5"/><rect x="11" y="11" width="4" height="4" rx=".5"/></svg>
+    </button>
+  </div>
+</div>
+
+<section class="view" data-view="selected">
+  <a class="feature reveal" href="w/lugard-road-hong-kong/#p-img-4430">
+    <span class="feature__frame" style="--ar: 1.5000; --ph: #283f54">
+      <img class="fade" src="photos/lugard-road-hong-kong/cc71ecd501f1-l.webp" width="2048" height="1365" alt="Lugard Road, Hong Kong" fetchpriority="high" decoding="async" draggable="false">
+    </span>
+    <span class="tile__caption"><span class="tile__title">Lugard Road, Hong Kong</span><span class="tile__date">April 2025</span></span>
+
+  </a>
+  <h2 class="section-title reveal">Selected Works<sup>13</sup></h2>
+  <div class="masonry">
+    <a class="tile reveal tile--dup" href="w/lugard-road-hong-kong/#p-img-4430" data-ar="1.5000">
+  <span class="tile__frame" style="--ph: #283f54; aspect-ratio: 960 / 640">
+    <img class="fade" src="photos/lugard-road-hong-kong/cc71ecd501f1-s.webp" srcset="photos/lugard-road-hong-kong/cc71ecd501f1-s.webp 960w, photos/lugard-road-hong-kong/cc71ecd501f1-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="960" height="640" alt="Lugard Road, Hong Kong" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Lugard Road, Hong Kong</span><span class="tile__date">April 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/san-pedro/#p-img-2067" data-ar="0.6672">
+  <span class="tile__frame" style="--ph: #4c3c31; aspect-ratio: 427 / 640">
+    <img class="fade" src="photos/san-pedro/16185493fc03-s.webp" srcset="photos/san-pedro/16185493fc03-s.webp 427w, photos/san-pedro/16185493fc03-l.webp 1365w" sizes="(min-width: 700px) 46vw, 92vw" width="427" height="640" alt="San Pedro" loading="eager" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">San Pedro</span><span class="tile__date">November 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/row-dtla-los-angeles/#p-img-6358-tif" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #959ea5; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/row-dtla-los-angeles/c204212dded1-s.webp" srcset="photos/row-dtla-los-angeles/c204212dded1-s.webp 1138w, photos/row-dtla-los-angeles/c204212dded1-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="ROW DTLA, Los Angeles" loading="eager" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">ROW DTLA, Los Angeles</span><span class="tile__date">October 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/jiuqu-huanghe/#p-img-5672" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #999e96; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/jiuqu-huanghe/f5a5cc941462-s.webp" srcset="photos/jiuqu-huanghe/f5a5cc941462-s.webp 1138w, photos/jiuqu-huanghe/f5a5cc941462-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="九曲黄河" loading="eager" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">九曲黄河</span><span class="tile__date">July 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/jiuqu-huanghe/#p-img-5674" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #7c8278; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/jiuqu-huanghe/b1acdc23af9e-s.webp" srcset="photos/jiuqu-huanghe/b1acdc23af9e-s.webp 1138w, photos/jiuqu-huanghe/b1acdc23af9e-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="九曲黄河" loading="eager" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">九曲黄河</span><span class="tile__date">July 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/chenzhou/#p-img-2083" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #405358; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/chenzhou/2c976cea3b10-s.webp" srcset="photos/chenzhou/2c976cea3b10-s.webp 1138w, photos/chenzhou/2c976cea3b10-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="Chenzhou" loading="eager" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Chenzhou</span><span class="tile__date">June 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/chenzhou/#p-img-2085" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #3f4b48; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/chenzhou/481b9235ec47-s.webp" srcset="photos/chenzhou/481b9235ec47-s.webp 1138w, photos/chenzhou/481b9235ec47-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="Chenzhou" loading="eager" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Chenzhou</span><span class="tile__date">June 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/siguniang-mountain/#p-img-1999" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #2d3a3d; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/siguniang-mountain/22d9db37ffb2-s.webp" srcset="photos/siguniang-mountain/22d9db37ffb2-s.webp 1138w, photos/siguniang-mountain/22d9db37ffb2-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="Siguniang Mountain" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Siguniang Mountain</span><span class="tile__date">May 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/siguniang-mountain/#p-img-2002" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #303638; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/siguniang-mountain/a7dfbc70e305-s.webp" srcset="photos/siguniang-mountain/a7dfbc70e305-s.webp 1138w, photos/siguniang-mountain/a7dfbc70e305-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="Siguniang Mountain" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Siguniang Mountain</span><span class="tile__date">May 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/kangding/#p-d30a9427" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #555457; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/kangding/5568fe89e10e-s.webp" srcset="photos/kangding/5568fe89e10e-s.webp 1138w, photos/kangding/5568fe89e10e-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="Kangding" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Kangding</span><span class="tile__date">May 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/haizhu-guangzhou/#p-img-4448" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #32373a; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/haizhu-guangzhou/d306c9ccd73c-s.webp" srcset="photos/haizhu-guangzhou/d306c9ccd73c-s.webp 1138w, photos/haizhu-guangzhou/d306c9ccd73c-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="Haizhu, Guangzhou" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Haizhu, Guangzhou</span><span class="tile__date">April 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/weihai/#p-img-1026" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #bec6d3; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/weihai/cc4820d4e26a-s.webp" srcset="photos/weihai/cc4820d4e26a-s.webp 1138w, photos/weihai/cc4820d4e26a-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="Weihai" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Weihai</span><span class="tile__date">February 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/tsingtao/#p-img-0932" data-ar="1.7797">
+  <span class="tile__frame" style="--ph: #57687a; aspect-ratio: 1139 / 640">
+    <img class="fade" src="photos/tsingtao/53657ed4fa85-s.webp" srcset="photos/tsingtao/53657ed4fa85-s.webp 1139w, photos/tsingtao/53657ed4fa85-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1139" height="640" alt="Tsingtao" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Tsingtao</span><span class="tile__date">February 2025</span></span>
+
+</a>
+
+  </div>
+  <h2 class="section-title reveal">Archive<sup>27</sup></h2>
+  <div class="masonry">
+    <a class="tile reveal" href="w/san-pedro/#p-ed58dc2c-af71-48e1-bc00-5fdeb1e9751c" data-ar="0.7500">
+  <span class="tile__frame" style="--ph: #4d3d31; aspect-ratio: 480 / 640">
+    <img class="fade" src="photos/san-pedro/791e349fcf76-s.webp" srcset="photos/san-pedro/791e349fcf76-s.webp 480w, photos/san-pedro/791e349fcf76-l.webp 1440w" sizes="(min-width: 700px) 46vw, 92vw" width="480" height="640" alt="San Pedro" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">San Pedro</span><span class="tile__date">November 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/san-pedro/#p-a305cff0-0281-4c84-b8c5-f52ec53832df" data-ar="0.7500">
+  <span class="tile__frame" style="--ph: #553c2f; aspect-ratio: 480 / 640">
+    <img class="fade" src="photos/san-pedro/6f9929608b2d-s.webp" srcset="photos/san-pedro/6f9929608b2d-s.webp 480w, photos/san-pedro/6f9929608b2d-l.webp 1440w" sizes="(min-width: 700px) 46vw, 92vw" width="480" height="640" alt="San Pedro" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">San Pedro</span><span class="tile__date">November 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/san-pedro/#p-925059f4-597d-484d-b1b3-e5d8568eee15" data-ar="0.7500">
+  <span class="tile__frame" style="--ph: #5a4637; aspect-ratio: 480 / 640">
+    <img class="fade" src="photos/san-pedro/58597e10a675-s.webp" srcset="photos/san-pedro/58597e10a675-s.webp 480w, photos/san-pedro/58597e10a675-l.webp 1440w" sizes="(min-width: 700px) 46vw, 92vw" width="480" height="640" alt="San Pedro" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">San Pedro</span><span class="tile__date">November 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/chenzhou/#p-img-2082" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #2f3730; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/chenzhou/a34b1b491a39-s.webp" srcset="photos/chenzhou/a34b1b491a39-s.webp 1138w, photos/chenzhou/a34b1b491a39-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="Chenzhou" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Chenzhou</span><span class="tile__date">June 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/chenzhou/#p-img-2081" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #373831; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/chenzhou/fd121f08688a-s.webp" srcset="photos/chenzhou/fd121f08688a-s.webp 1138w, photos/chenzhou/fd121f08688a-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="Chenzhou" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Chenzhou</span><span class="tile__date">June 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/siguniang-mountain/#p-img-2020" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #272f31; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/siguniang-mountain/0666eeacbe5a-s.webp" srcset="photos/siguniang-mountain/0666eeacbe5a-s.webp 1138w, photos/siguniang-mountain/0666eeacbe5a-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="Siguniang Mountain" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Siguniang Mountain</span><span class="tile__date">May 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/siguniang-mountain/#p-img-2019" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #24363c; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/siguniang-mountain/b1df754e1788-s.webp" srcset="photos/siguniang-mountain/b1df754e1788-s.webp 1138w, photos/siguniang-mountain/b1df754e1788-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="Siguniang Mountain" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Siguniang Mountain</span><span class="tile__date">May 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/siguniang-mountain/#p-img-2018" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #243b44; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/siguniang-mountain/a6c3a947c909-s.webp" srcset="photos/siguniang-mountain/a6c3a947c909-s.webp 1138w, photos/siguniang-mountain/a6c3a947c909-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="Siguniang Mountain" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Siguniang Mountain</span><span class="tile__date">May 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/siguniang-mountain/#p-img-2003" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #22251f; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/siguniang-mountain/6553131dc88c-s.webp" srcset="photos/siguniang-mountain/6553131dc88c-s.webp 1138w, photos/siguniang-mountain/6553131dc88c-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="Siguniang Mountain" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Siguniang Mountain</span><span class="tile__date">May 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/haizhu-guangzhou/#p-img-4449" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #2a2523; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/haizhu-guangzhou/e1bb1291fd31-s.webp" srcset="photos/haizhu-guangzhou/e1bb1291fd31-s.webp 1138w, photos/haizhu-guangzhou/e1bb1291fd31-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="Haizhu, Guangzhou" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Haizhu, Guangzhou</span><span class="tile__date">April 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/haizhu-guangzhou/#p-img-4446" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #363635; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/haizhu-guangzhou/e11d11a262f0-s.webp" srcset="photos/haizhu-guangzhou/e11d11a262f0-s.webp 1138w, photos/haizhu-guangzhou/e11d11a262f0-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="Haizhu, Guangzhou" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Haizhu, Guangzhou</span><span class="tile__date">April 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/lugard-road-hong-kong/#p-img-4427" data-ar="1.5000">
+  <span class="tile__frame" style="--ph: #1d1916; aspect-ratio: 960 / 640">
+    <img class="fade" src="photos/lugard-road-hong-kong/feed95675468-s.webp" srcset="photos/lugard-road-hong-kong/feed95675468-s.webp 960w, photos/lugard-road-hong-kong/feed95675468-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="960" height="640" alt="Lugard Road, Hong Kong" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Lugard Road, Hong Kong</span><span class="tile__date">April 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/lugard-road-hong-kong/#p-img-4428" data-ar="1.5000">
+  <span class="tile__frame" style="--ph: #262e37; aspect-ratio: 960 / 640">
+    <img class="fade" src="photos/lugard-road-hong-kong/b0a99ca4bd55-s.webp" srcset="photos/lugard-road-hong-kong/b0a99ca4bd55-s.webp 960w, photos/lugard-road-hong-kong/b0a99ca4bd55-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="960" height="640" alt="Lugard Road, Hong Kong" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Lugard Road, Hong Kong</span><span class="tile__date">April 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/lugard-road-hong-kong/#p-img-4429" data-ar="1.5000">
+  <span class="tile__frame" style="--ph: #283849; aspect-ratio: 960 / 640">
+    <img class="fade" src="photos/lugard-road-hong-kong/4458230fe06a-s.webp" srcset="photos/lugard-road-hong-kong/4458230fe06a-s.webp 960w, photos/lugard-road-hong-kong/4458230fe06a-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="960" height="640" alt="Lugard Road, Hong Kong" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Lugard Road, Hong Kong</span><span class="tile__date">April 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/dongshankou-guangzhou/#p-d30a8740" data-ar="0.6672">
+  <span class="tile__frame" style="--ph: #696366; aspect-ratio: 427 / 640">
+    <img class="fade" src="photos/dongshankou-guangzhou/c70aa0b603a7-s.webp" srcset="photos/dongshankou-guangzhou/c70aa0b603a7-s.webp 427w, photos/dongshankou-guangzhou/c70aa0b603a7-l.webp 1366w" sizes="(min-width: 700px) 46vw, 92vw" width="427" height="640" alt="Dongshankou, Guangzhou" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Dongshankou, Guangzhou</span><span class="tile__date">March 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/dongshankou-guangzhou/#p-d30a8717" data-ar="0.6672">
+  <span class="tile__frame" style="--ph: #868c93; aspect-ratio: 427 / 640">
+    <img class="fade" src="photos/dongshankou-guangzhou/d291956cb2f5-s.webp" srcset="photos/dongshankou-guangzhou/d291956cb2f5-s.webp 427w, photos/dongshankou-guangzhou/d291956cb2f5-l.webp 1366w" sizes="(min-width: 700px) 46vw, 92vw" width="427" height="640" alt="Dongshankou, Guangzhou" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Dongshankou, Guangzhou</span><span class="tile__date">March 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/dongshankou-guangzhou/#p-d30a8714" data-ar="0.6672">
+  <span class="tile__frame" style="--ph: #75757a; aspect-ratio: 427 / 640">
+    <img class="fade" src="photos/dongshankou-guangzhou/04a39f4d751d-s.webp" srcset="photos/dongshankou-guangzhou/04a39f4d751d-s.webp 427w, photos/dongshankou-guangzhou/04a39f4d751d-l.webp 1365w" sizes="(min-width: 700px) 46vw, 92vw" width="427" height="640" alt="Dongshankou, Guangzhou" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Dongshankou, Guangzhou</span><span class="tile__date">March 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/dongshankou-guangzhou/#p-d30a8713" data-ar="0.6672">
+  <span class="tile__frame" style="--ph: #7b7f88; aspect-ratio: 427 / 640">
+    <img class="fade" src="photos/dongshankou-guangzhou/fb2e0f549647-s.webp" srcset="photos/dongshankou-guangzhou/fb2e0f549647-s.webp 427w, photos/dongshankou-guangzhou/fb2e0f549647-l.webp 1366w" sizes="(min-width: 700px) 46vw, 92vw" width="427" height="640" alt="Dongshankou, Guangzhou" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Dongshankou, Guangzhou</span><span class="tile__date">March 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/dongshankou-guangzhou/#p-d30a8712" data-ar="0.6672">
+  <span class="tile__frame" style="--ph: #5f595c; aspect-ratio: 427 / 640">
+    <img class="fade" src="photos/dongshankou-guangzhou/8711bbf0e4bc-s.webp" srcset="photos/dongshankou-guangzhou/8711bbf0e4bc-s.webp 427w, photos/dongshankou-guangzhou/8711bbf0e4bc-l.webp 1365w" sizes="(min-width: 700px) 46vw, 92vw" width="427" height="640" alt="Dongshankou, Guangzhou" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Dongshankou, Guangzhou</span><span class="tile__date">March 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/weihai/#p-img-1028" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #e1e0e3; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/weihai/9b8b8839adfb-s.webp" srcset="photos/weihai/9b8b8839adfb-s.webp 1138w, photos/weihai/9b8b8839adfb-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="Weihai" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Weihai</span><span class="tile__date">February 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/tsingtao/#p-img-0941" data-ar="1.7797">
+  <span class="tile__frame" style="--ph: #717577; aspect-ratio: 1139 / 640">
+    <img class="fade" src="photos/tsingtao/c9b4fdacf06c-s.webp" srcset="photos/tsingtao/c9b4fdacf06c-s.webp 1139w, photos/tsingtao/c9b4fdacf06c-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1139" height="640" alt="Tsingtao" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Tsingtao</span><span class="tile__date">February 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/tsingtao/#p-img-0939" data-ar="1.7797">
+  <span class="tile__frame" style="--ph: #788293; aspect-ratio: 1139 / 640">
+    <img class="fade" src="photos/tsingtao/e61d764f81ce-s.webp" srcset="photos/tsingtao/e61d764f81ce-s.webp 1139w, photos/tsingtao/e61d764f81ce-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1139" height="640" alt="Tsingtao" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Tsingtao</span><span class="tile__date">February 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/tsingtao/#p-img-0933" data-ar="1.7797">
+  <span class="tile__frame" style="--ph: #7e8894; aspect-ratio: 1139 / 640">
+    <img class="fade" src="photos/tsingtao/fa2b6777714f-s.webp" srcset="photos/tsingtao/fa2b6777714f-s.webp 1139w, photos/tsingtao/fa2b6777714f-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1139" height="640" alt="Tsingtao" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Tsingtao</span><span class="tile__date">February 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/tsingtao/#p-img-0930" data-ar="1.7797">
+  <span class="tile__frame" style="--ph: #4e5258; aspect-ratio: 1139 / 640">
+    <img class="fade" src="photos/tsingtao/16ed641b297e-s.webp" srcset="photos/tsingtao/16ed641b297e-s.webp 1139w, photos/tsingtao/16ed641b297e-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1139" height="640" alt="Tsingtao" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Tsingtao</span><span class="tile__date">February 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/tsingtao/#p-img-0929" data-ar="1.7797">
+  <span class="tile__frame" style="--ph: #86848b; aspect-ratio: 1139 / 640">
+    <img class="fade" src="photos/tsingtao/3a6965695725-s.webp" srcset="photos/tsingtao/3a6965695725-s.webp 1139w, photos/tsingtao/3a6965695725-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1139" height="640" alt="Tsingtao" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Tsingtao</span><span class="tile__date">February 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/tsingtao/#p-img-0928" data-ar="1.7797">
+  <span class="tile__frame" style="--ph: #4c4d4f; aspect-ratio: 1139 / 640">
+    <img class="fade" src="photos/tsingtao/7ed37d38b8a2-s.webp" srcset="photos/tsingtao/7ed37d38b8a2-s.webp 1139w, photos/tsingtao/7ed37d38b8a2-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1139" height="640" alt="Tsingtao" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Tsingtao</span><span class="tile__date">February 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/tsingtao/#p-img-0927" data-ar="1.7797">
+  <span class="tile__frame" style="--ph: #716d75; aspect-ratio: 1139 / 640">
+    <img class="fade" src="photos/tsingtao/871091eedae6-s.webp" srcset="photos/tsingtao/871091eedae6-s.webp 1139w, photos/tsingtao/871091eedae6-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1139" height="640" alt="Tsingtao" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Tsingtao</span><span class="tile__date">February 2025</span></span>
+
+</a>
+
+  </div>
+</section>
+
+<section class="view" data-view="timeline" hidden>
+  <h2 class="section-title reveal">All Photographs<sup>40</sup></h2>
+  <div class="masonry">
+    <a class="tile reveal" href="w/san-pedro/#p-img-2067" data-ar="0.6672">
+  <span class="tile__frame" style="--ph: #4c3c31; aspect-ratio: 427 / 640">
+    <img class="fade" src="photos/san-pedro/16185493fc03-s.webp" srcset="photos/san-pedro/16185493fc03-s.webp 427w, photos/san-pedro/16185493fc03-l.webp 1365w" sizes="(min-width: 700px) 46vw, 92vw" width="427" height="640" alt="San Pedro" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">San Pedro</span><span class="tile__date">November 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/san-pedro/#p-ed58dc2c-af71-48e1-bc00-5fdeb1e9751c" data-ar="0.7500">
+  <span class="tile__frame" style="--ph: #4d3d31; aspect-ratio: 480 / 640">
+    <img class="fade" src="photos/san-pedro/791e349fcf76-s.webp" srcset="photos/san-pedro/791e349fcf76-s.webp 480w, photos/san-pedro/791e349fcf76-l.webp 1440w" sizes="(min-width: 700px) 46vw, 92vw" width="480" height="640" alt="San Pedro" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">San Pedro</span><span class="tile__date">November 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/san-pedro/#p-a305cff0-0281-4c84-b8c5-f52ec53832df" data-ar="0.7500">
+  <span class="tile__frame" style="--ph: #553c2f; aspect-ratio: 480 / 640">
+    <img class="fade" src="photos/san-pedro/6f9929608b2d-s.webp" srcset="photos/san-pedro/6f9929608b2d-s.webp 480w, photos/san-pedro/6f9929608b2d-l.webp 1440w" sizes="(min-width: 700px) 46vw, 92vw" width="480" height="640" alt="San Pedro" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">San Pedro</span><span class="tile__date">November 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/san-pedro/#p-925059f4-597d-484d-b1b3-e5d8568eee15" data-ar="0.7500">
+  <span class="tile__frame" style="--ph: #5a4637; aspect-ratio: 480 / 640">
+    <img class="fade" src="photos/san-pedro/58597e10a675-s.webp" srcset="photos/san-pedro/58597e10a675-s.webp 480w, photos/san-pedro/58597e10a675-l.webp 1440w" sizes="(min-width: 700px) 46vw, 92vw" width="480" height="640" alt="San Pedro" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">San Pedro</span><span class="tile__date">November 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/row-dtla-los-angeles/#p-img-6358-tif" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #959ea5; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/row-dtla-los-angeles/c204212dded1-s.webp" srcset="photos/row-dtla-los-angeles/c204212dded1-s.webp 1138w, photos/row-dtla-los-angeles/c204212dded1-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="ROW DTLA, Los Angeles" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">ROW DTLA, Los Angeles</span><span class="tile__date">October 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/jiuqu-huanghe/#p-img-5674" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #7c8278; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/jiuqu-huanghe/b1acdc23af9e-s.webp" srcset="photos/jiuqu-huanghe/b1acdc23af9e-s.webp 1138w, photos/jiuqu-huanghe/b1acdc23af9e-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="九曲黄河" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">九曲黄河</span><span class="tile__date">July 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/jiuqu-huanghe/#p-img-5672" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #999e96; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/jiuqu-huanghe/f5a5cc941462-s.webp" srcset="photos/jiuqu-huanghe/f5a5cc941462-s.webp 1138w, photos/jiuqu-huanghe/f5a5cc941462-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="九曲黄河" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">九曲黄河</span><span class="tile__date">July 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/chenzhou/#p-img-2085" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #3f4b48; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/chenzhou/481b9235ec47-s.webp" srcset="photos/chenzhou/481b9235ec47-s.webp 1138w, photos/chenzhou/481b9235ec47-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="Chenzhou" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Chenzhou</span><span class="tile__date">June 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/chenzhou/#p-img-2083" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #405358; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/chenzhou/2c976cea3b10-s.webp" srcset="photos/chenzhou/2c976cea3b10-s.webp 1138w, photos/chenzhou/2c976cea3b10-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="Chenzhou" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Chenzhou</span><span class="tile__date">June 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/chenzhou/#p-img-2082" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #2f3730; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/chenzhou/a34b1b491a39-s.webp" srcset="photos/chenzhou/a34b1b491a39-s.webp 1138w, photos/chenzhou/a34b1b491a39-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="Chenzhou" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Chenzhou</span><span class="tile__date">June 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/chenzhou/#p-img-2081" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #373831; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/chenzhou/fd121f08688a-s.webp" srcset="photos/chenzhou/fd121f08688a-s.webp 1138w, photos/chenzhou/fd121f08688a-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="Chenzhou" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Chenzhou</span><span class="tile__date">June 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/siguniang-mountain/#p-img-2020" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #272f31; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/siguniang-mountain/0666eeacbe5a-s.webp" srcset="photos/siguniang-mountain/0666eeacbe5a-s.webp 1138w, photos/siguniang-mountain/0666eeacbe5a-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="Siguniang Mountain" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Siguniang Mountain</span><span class="tile__date">May 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/siguniang-mountain/#p-img-2019" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #24363c; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/siguniang-mountain/b1df754e1788-s.webp" srcset="photos/siguniang-mountain/b1df754e1788-s.webp 1138w, photos/siguniang-mountain/b1df754e1788-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="Siguniang Mountain" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Siguniang Mountain</span><span class="tile__date">May 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/siguniang-mountain/#p-img-2018" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #243b44; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/siguniang-mountain/a6c3a947c909-s.webp" srcset="photos/siguniang-mountain/a6c3a947c909-s.webp 1138w, photos/siguniang-mountain/a6c3a947c909-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="Siguniang Mountain" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Siguniang Mountain</span><span class="tile__date">May 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/siguniang-mountain/#p-img-2003" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #22251f; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/siguniang-mountain/6553131dc88c-s.webp" srcset="photos/siguniang-mountain/6553131dc88c-s.webp 1138w, photos/siguniang-mountain/6553131dc88c-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="Siguniang Mountain" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Siguniang Mountain</span><span class="tile__date">May 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/siguniang-mountain/#p-img-2002" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #303638; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/siguniang-mountain/a7dfbc70e305-s.webp" srcset="photos/siguniang-mountain/a7dfbc70e305-s.webp 1138w, photos/siguniang-mountain/a7dfbc70e305-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="Siguniang Mountain" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Siguniang Mountain</span><span class="tile__date">May 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/siguniang-mountain/#p-img-1999" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #2d3a3d; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/siguniang-mountain/22d9db37ffb2-s.webp" srcset="photos/siguniang-mountain/22d9db37ffb2-s.webp 1138w, photos/siguniang-mountain/22d9db37ffb2-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="Siguniang Mountain" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Siguniang Mountain</span><span class="tile__date">May 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/kangding/#p-d30a9427" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #555457; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/kangding/5568fe89e10e-s.webp" srcset="photos/kangding/5568fe89e10e-s.webp 1138w, photos/kangding/5568fe89e10e-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="Kangding" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Kangding</span><span class="tile__date">May 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/haizhu-guangzhou/#p-img-4449" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #2a2523; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/haizhu-guangzhou/e1bb1291fd31-s.webp" srcset="photos/haizhu-guangzhou/e1bb1291fd31-s.webp 1138w, photos/haizhu-guangzhou/e1bb1291fd31-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="Haizhu, Guangzhou" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Haizhu, Guangzhou</span><span class="tile__date">April 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/haizhu-guangzhou/#p-img-4446" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #363635; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/haizhu-guangzhou/e11d11a262f0-s.webp" srcset="photos/haizhu-guangzhou/e11d11a262f0-s.webp 1138w, photos/haizhu-guangzhou/e11d11a262f0-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="Haizhu, Guangzhou" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Haizhu, Guangzhou</span><span class="tile__date">April 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/haizhu-guangzhou/#p-img-4448" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #32373a; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/haizhu-guangzhou/d306c9ccd73c-s.webp" srcset="photos/haizhu-guangzhou/d306c9ccd73c-s.webp 1138w, photos/haizhu-guangzhou/d306c9ccd73c-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="Haizhu, Guangzhou" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Haizhu, Guangzhou</span><span class="tile__date">April 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/lugard-road-hong-kong/#p-img-4427" data-ar="1.5000">
+  <span class="tile__frame" style="--ph: #1d1916; aspect-ratio: 960 / 640">
+    <img class="fade" src="photos/lugard-road-hong-kong/feed95675468-s.webp" srcset="photos/lugard-road-hong-kong/feed95675468-s.webp 960w, photos/lugard-road-hong-kong/feed95675468-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="960" height="640" alt="Lugard Road, Hong Kong" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Lugard Road, Hong Kong</span><span class="tile__date">April 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/lugard-road-hong-kong/#p-img-4428" data-ar="1.5000">
+  <span class="tile__frame" style="--ph: #262e37; aspect-ratio: 960 / 640">
+    <img class="fade" src="photos/lugard-road-hong-kong/b0a99ca4bd55-s.webp" srcset="photos/lugard-road-hong-kong/b0a99ca4bd55-s.webp 960w, photos/lugard-road-hong-kong/b0a99ca4bd55-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="960" height="640" alt="Lugard Road, Hong Kong" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Lugard Road, Hong Kong</span><span class="tile__date">April 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/lugard-road-hong-kong/#p-img-4429" data-ar="1.5000">
+  <span class="tile__frame" style="--ph: #283849; aspect-ratio: 960 / 640">
+    <img class="fade" src="photos/lugard-road-hong-kong/4458230fe06a-s.webp" srcset="photos/lugard-road-hong-kong/4458230fe06a-s.webp 960w, photos/lugard-road-hong-kong/4458230fe06a-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="960" height="640" alt="Lugard Road, Hong Kong" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Lugard Road, Hong Kong</span><span class="tile__date">April 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/lugard-road-hong-kong/#p-img-4430" data-ar="1.5000">
+  <span class="tile__frame" style="--ph: #283f54; aspect-ratio: 960 / 640">
+    <img class="fade" src="photos/lugard-road-hong-kong/cc71ecd501f1-s.webp" srcset="photos/lugard-road-hong-kong/cc71ecd501f1-s.webp 960w, photos/lugard-road-hong-kong/cc71ecd501f1-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="960" height="640" alt="Lugard Road, Hong Kong" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Lugard Road, Hong Kong</span><span class="tile__date">April 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/dongshankou-guangzhou/#p-d30a8740" data-ar="0.6672">
+  <span class="tile__frame" style="--ph: #696366; aspect-ratio: 427 / 640">
+    <img class="fade" src="photos/dongshankou-guangzhou/c70aa0b603a7-s.webp" srcset="photos/dongshankou-guangzhou/c70aa0b603a7-s.webp 427w, photos/dongshankou-guangzhou/c70aa0b603a7-l.webp 1366w" sizes="(min-width: 700px) 46vw, 92vw" width="427" height="640" alt="Dongshankou, Guangzhou" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Dongshankou, Guangzhou</span><span class="tile__date">March 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/dongshankou-guangzhou/#p-d30a8717" data-ar="0.6672">
+  <span class="tile__frame" style="--ph: #868c93; aspect-ratio: 427 / 640">
+    <img class="fade" src="photos/dongshankou-guangzhou/d291956cb2f5-s.webp" srcset="photos/dongshankou-guangzhou/d291956cb2f5-s.webp 427w, photos/dongshankou-guangzhou/d291956cb2f5-l.webp 1366w" sizes="(min-width: 700px) 46vw, 92vw" width="427" height="640" alt="Dongshankou, Guangzhou" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Dongshankou, Guangzhou</span><span class="tile__date">March 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/dongshankou-guangzhou/#p-d30a8714" data-ar="0.6672">
+  <span class="tile__frame" style="--ph: #75757a; aspect-ratio: 427 / 640">
+    <img class="fade" src="photos/dongshankou-guangzhou/04a39f4d751d-s.webp" srcset="photos/dongshankou-guangzhou/04a39f4d751d-s.webp 427w, photos/dongshankou-guangzhou/04a39f4d751d-l.webp 1365w" sizes="(min-width: 700px) 46vw, 92vw" width="427" height="640" alt="Dongshankou, Guangzhou" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Dongshankou, Guangzhou</span><span class="tile__date">March 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/dongshankou-guangzhou/#p-d30a8713" data-ar="0.6672">
+  <span class="tile__frame" style="--ph: #7b7f88; aspect-ratio: 427 / 640">
+    <img class="fade" src="photos/dongshankou-guangzhou/fb2e0f549647-s.webp" srcset="photos/dongshankou-guangzhou/fb2e0f549647-s.webp 427w, photos/dongshankou-guangzhou/fb2e0f549647-l.webp 1366w" sizes="(min-width: 700px) 46vw, 92vw" width="427" height="640" alt="Dongshankou, Guangzhou" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Dongshankou, Guangzhou</span><span class="tile__date">March 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/dongshankou-guangzhou/#p-d30a8712" data-ar="0.6672">
+  <span class="tile__frame" style="--ph: #5f595c; aspect-ratio: 427 / 640">
+    <img class="fade" src="photos/dongshankou-guangzhou/8711bbf0e4bc-s.webp" srcset="photos/dongshankou-guangzhou/8711bbf0e4bc-s.webp 427w, photos/dongshankou-guangzhou/8711bbf0e4bc-l.webp 1365w" sizes="(min-width: 700px) 46vw, 92vw" width="427" height="640" alt="Dongshankou, Guangzhou" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Dongshankou, Guangzhou</span><span class="tile__date">March 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/weihai/#p-img-1028" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #e1e0e3; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/weihai/9b8b8839adfb-s.webp" srcset="photos/weihai/9b8b8839adfb-s.webp 1138w, photos/weihai/9b8b8839adfb-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="Weihai" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Weihai</span><span class="tile__date">February 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/weihai/#p-img-1026" data-ar="1.7781">
+  <span class="tile__frame" style="--ph: #bec6d3; aspect-ratio: 1138 / 640">
+    <img class="fade" src="photos/weihai/cc4820d4e26a-s.webp" srcset="photos/weihai/cc4820d4e26a-s.webp 1138w, photos/weihai/cc4820d4e26a-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1138" height="640" alt="Weihai" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Weihai</span><span class="tile__date">February 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/tsingtao/#p-img-0941" data-ar="1.7797">
+  <span class="tile__frame" style="--ph: #717577; aspect-ratio: 1139 / 640">
+    <img class="fade" src="photos/tsingtao/c9b4fdacf06c-s.webp" srcset="photos/tsingtao/c9b4fdacf06c-s.webp 1139w, photos/tsingtao/c9b4fdacf06c-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1139" height="640" alt="Tsingtao" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Tsingtao</span><span class="tile__date">February 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/tsingtao/#p-img-0939" data-ar="1.7797">
+  <span class="tile__frame" style="--ph: #788293; aspect-ratio: 1139 / 640">
+    <img class="fade" src="photos/tsingtao/e61d764f81ce-s.webp" srcset="photos/tsingtao/e61d764f81ce-s.webp 1139w, photos/tsingtao/e61d764f81ce-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1139" height="640" alt="Tsingtao" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Tsingtao</span><span class="tile__date">February 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/tsingtao/#p-img-0933" data-ar="1.7797">
+  <span class="tile__frame" style="--ph: #7e8894; aspect-ratio: 1139 / 640">
+    <img class="fade" src="photos/tsingtao/fa2b6777714f-s.webp" srcset="photos/tsingtao/fa2b6777714f-s.webp 1139w, photos/tsingtao/fa2b6777714f-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1139" height="640" alt="Tsingtao" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Tsingtao</span><span class="tile__date">February 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/tsingtao/#p-img-0932" data-ar="1.7797">
+  <span class="tile__frame" style="--ph: #57687a; aspect-ratio: 1139 / 640">
+    <img class="fade" src="photos/tsingtao/53657ed4fa85-s.webp" srcset="photos/tsingtao/53657ed4fa85-s.webp 1139w, photos/tsingtao/53657ed4fa85-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1139" height="640" alt="Tsingtao" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Tsingtao</span><span class="tile__date">February 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/tsingtao/#p-img-0930" data-ar="1.7797">
+  <span class="tile__frame" style="--ph: #4e5258; aspect-ratio: 1139 / 640">
+    <img class="fade" src="photos/tsingtao/16ed641b297e-s.webp" srcset="photos/tsingtao/16ed641b297e-s.webp 1139w, photos/tsingtao/16ed641b297e-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1139" height="640" alt="Tsingtao" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Tsingtao</span><span class="tile__date">February 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/tsingtao/#p-img-0929" data-ar="1.7797">
+  <span class="tile__frame" style="--ph: #86848b; aspect-ratio: 1139 / 640">
+    <img class="fade" src="photos/tsingtao/3a6965695725-s.webp" srcset="photos/tsingtao/3a6965695725-s.webp 1139w, photos/tsingtao/3a6965695725-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1139" height="640" alt="Tsingtao" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Tsingtao</span><span class="tile__date">February 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/tsingtao/#p-img-0928" data-ar="1.7797">
+  <span class="tile__frame" style="--ph: #4c4d4f; aspect-ratio: 1139 / 640">
+    <img class="fade" src="photos/tsingtao/7ed37d38b8a2-s.webp" srcset="photos/tsingtao/7ed37d38b8a2-s.webp 1139w, photos/tsingtao/7ed37d38b8a2-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1139" height="640" alt="Tsingtao" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Tsingtao</span><span class="tile__date">February 2025</span></span>
+
+</a>
+
+    <a class="tile reveal" href="w/tsingtao/#p-img-0927" data-ar="1.7797">
+  <span class="tile__frame" style="--ph: #716d75; aspect-ratio: 1139 / 640">
+    <img class="fade" src="photos/tsingtao/871091eedae6-s.webp" srcset="photos/tsingtao/871091eedae6-s.webp 1139w, photos/tsingtao/871091eedae6-l.webp 2048w" sizes="(min-width: 700px) 46vw, 92vw" width="1139" height="640" alt="Tsingtao" loading="lazy" decoding="async" draggable="false">
+  </span>
+  <span class="tile__caption"><span class="tile__title">Tsingtao</span><span class="tile__date">February 2025</span></span>
+
+</a>
+
+  </div>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p class="site-footer__name">© 2026 Fengcheng Yu</p>
+      <div class="site-footer__text">
+        <p>All rights reserved. All photographs on this site were taken by Fengcheng Yu and are protected by copyright. Please do not download, copy, modify, or use them for commercial or any other purpose without written permission.</p>
+        <p>本站所有摄影作品均由 Fengcheng Yu 拍摄，版权所有。未经书面授权，请勿下载、转载、修改，或用于商业及其他任何用途。</p>
+        <p>For licensing or other inquiries 如需授权或其他事宜：<a href="mailto:yufc779@gmail.com">yufc779 [at] gmail.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/js/theme.js"></script>
+<script type="module" src="assets/js/home.js"></script>
+  <script>
+    // If the motion script never runs (blocked or failed), show everything instead of leaving it hidden.
+    setTimeout(function () { if (!window.__motion) document.documentElement.classList.add('no-motion'); }, 2500);
+  </script>
+</body>
+</html>

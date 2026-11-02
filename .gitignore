@@ -1,0 +1,45 @@
+# Original photos must never be committed. The site only needs the processed .webp files in photos/.
+originals/
+*.jpg
+*.JPG
+*.jpeg
+*.JPEG
+*.png
+*.PNG
+*.heic
+*.HEIC
+*.heif
+*.HEIF
+*.tif
+*.TIF
+*.tiff
+*.TIFF
+*.dng
+*.DNG
+*.raw
+*.RAW
+*.nef
+*.NEF
+*.cr2
+*.CR2
+*.cr3
+*.CR3
+*.arw
+*.ARW
+*.raf
+*.RAF
+*.orf
+*.ORF
+*.rw2
+*.RW2
+*.psd
+*.PSD
+
+# Local settings: where the originals folder is
+config.local.yaml
+
+# Notes for Claude Code, kept local
+CLAUDE.md
+
+.DS_Store
+__pycache__/

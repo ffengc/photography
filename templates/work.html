@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ work.title }} · {{ site.author }} Photography{% endblock %}
+{% block description %}{{ work.note or (work.title ~ ', photographed by ' ~ site.author) }}{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ root }}assets/vendor/photoswipe/photoswipe.css">
+<script>
+  // Arriving from the home page: the photo that was clicked takes part in the view transition.
+  addEventListener('pagereveal', function (event) {
+    if (!event.viewTransition) return;
+    var target = (location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)))) || document.querySelector('.plate');
+    var img = target && target.querySelector('img');
+    if (!img) return;
+    img.style.viewTransitionName = 'photo';
+    event.viewTransition.finished.finally(function () { img.style.viewTransitionName = ''; });
+  });
+</script>
+{% endblock %}
+
+{% block main %}
+<a class="back-link" href="{{ root }}">← Index</a>
+
+<header class="work-head reveal">
+  <h1>{{ work.title }}</h1>
+  {% if work.meta %}
+  <p class="work-head__meta">{{ work.meta }}</p>
+  {% endif %}
+  {% if work.note %}
+  <p class="work-head__note">{{ work.note }}</p>
+  {% endif %}
+</header>
+
+<div class="plates" id="gallery">
+  {% for s in shots %}
+  <figure class="plate" id="{{ s.pid }}">
+    <a class="plate__link" href="{{ s.src }}" data-pswp-width="{{ s.lw }}" data-pswp-height="{{ s.lh }}" style="--ar: {{ s.ar }}; --ph: {{ s.color }}">
+      <img class="fade" src="{{ s.src }}" width="{{ s.lw }}" height="{{ s.lh }}" alt="{{ s.alt }}" loading="{{ 'eager' if loop.index <= 2 else 'lazy' }}" decoding="async" draggable="false">
+    </a>
+    {% if s.caption or s.detail or s.exif %}
+    <figcaption class="plate__label">
+      {% if s.caption %}
+      <p class="plate__caption">{{ s.caption }}</p>
+      {% endif %}
+      {% if s.detail %}
+      <p class="plate__detail">{{ s.detail }}</p>
+      {% endif %}
+      {% if s.exif %}
+      <p class="plate__exif">{{ s.exif }}</p>
+      {% endif %}
+    </figcaption>
+    {% endif %}
+  </figure>
+  {% endfor %}
+</div>
+
+{% if shots | length > 1 %}
+<div class="counter" aria-hidden="true"><span class="counter__now">01</span> / {{ '%02d' % (shots | length) }}</div>
+{% endif %}
+
+{% if prev or next %}
+<nav class="work-nav reveal" aria-label="More works">
+  {% for side, w in (('prev', prev), ('next', next)) %}
+  {% if w %}
+  <a class="work-nav__{{ side }}" href="{{ w.href }}">
+    <span class="work-nav__label">{{ 'Previous' if side == 'prev' else 'Next' }}</span>
+    <span class="work-nav__title">{{ w.title }}</span>
+    <span class="work-nav__thumb" style="--ar: {{ w.ar }}; --ph: {{ w.color }}"><img class="fade" src="{{ w.thumb }}" alt="" loading="lazy" decoding="async" draggable="false"></span>
+  </a>
+  {% else %}
+  <span></span>
+  {% endif %}
+  {% endfor %}
+</nav>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+<script type="module" src="{{ root }}assets/js/work.js"></script>
+{% endblock %}
