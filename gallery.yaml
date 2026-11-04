@@ -9,6 +9,10 @@ site:
 # 精选：默认页面最上面，按这里的顺序显示（上下挪动就能调顺序）。写法："文件夹名/文件名"
 selected:
   - "Lugard Road, Hong Kong/IMG_4430.JPG"   # the best，排第一
+  - "Hot Creek Geologic Site, Mammoth Lakes/IMG_7313.JPG"
+  - "Hot Creek Geologic Site, Mammoth Lakes/IMG_6726.JPG"
+  - "SF/IMG_6786.JPG"
+  - "San Pedro #2/IMG_2219.JPG"
   - "San Pedro/IMG_2067.jpg"
   - "ROW DTLA, Los Angeles/IMG_6358_TIF.JPG"
   - "九曲黄河/IMG_5672.JPG"
@@ -19,6 +23,7 @@ selected:
   - "Siguniang Mountain/IMG_2002.JPG"
   - "Kangding/D30A9427.JPG"
   - "Haizhu, Guangzhou/IMG_4448.jpg"
+  - "Dongshankou, Guangzhou/D30A8713.JPG"   # 木棉花和广州塔
   - "Weihai/IMG_1026.JPG"
   - "Tsingtao/IMG_0932.jpg"
 
@@ -47,6 +52,10 @@ works:
     id: haizhu-guangzhou
     note: ""
 
+  "Hot Creek Geologic Site, Mammoth Lakes":
+    id: hot-creek-mammoth-lakes
+    note: ""
+
   "Kangding":
     id: kangding
     note: ""
@@ -66,6 +75,15 @@ works:
     # photos:
     #   925059F4-597D-484D-B1B3-E5D8568EEE15.JPG:
     #     date: 2025-11-27
+
+  "San Pedro #2":
+    id: san-pedro-2
+    note: ""
+
+  "SF":
+    id: san-francisco
+    title: San Francisco
+    note: ""
 
   "Siguniang Mountain":
     id: siguniang-mountain
